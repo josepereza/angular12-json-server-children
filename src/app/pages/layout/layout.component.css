@@ -1,0 +1,11 @@
+.layout{
+    display: flex;
+    color:aliceblue;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+  background-image: url('../../../assets/images/red.jpg');
+  background-size: cover;
+}
