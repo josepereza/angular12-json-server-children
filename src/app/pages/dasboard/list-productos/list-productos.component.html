@@ -2,6 +2,7 @@
 <ul *ngFor="let dato of productos">
     <li>
     <b>"Nombre : "</b>,{{dato.name}} <br>
-    <b>"Descripcion : "</b>,,{{dato.description}}
+    <b>"Descripcion : "</b>,{{dato.description}} <br>
+    <button  (click)="detail(dato.id)" class="btn btn-primary">Ver</button>
     </li>
 </ul>

@@ -12,4 +12,7 @@ export class ProductosService {
     console.log('servicio')
     return this.http.get<Producto[]>('http://localhost:3000/data')
   }
+  listDetail(id:number){
+    return this.http.get(`http://localhost:3000/data/${id}`)
+  }
 }

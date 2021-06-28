@@ -9,6 +9,7 @@ import { NavbarComponent } from './pages/dasboard/navbar/navbar.component';
 import { ListProductosComponent } from './pages/dasboard/list-productos/list-productos.component';
 import { FooterComponent } from './pages/dasboard/footer/footer.component';
 import { HttpClientModule } from "@angular/common/http";
+import { DetailComponent } from './pages/dasboard/detail/detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { HttpClientModule } from "@angular/common/http";
     DasboardComponent,
     NavbarComponent,
     ListProductosComponent,
-    FooterComponent
+    FooterComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

@@ -13,5 +13,9 @@ productos:Producto[]=[]
   ngOnInit(): void {
     this.productosService.listAll().subscribe(data=>this.productos=data)
   }
-
+detail(id:number){
+this.productosService.listDetail(id).subscribe(data=>{
+  console.log(data)
+})
+}
 }
