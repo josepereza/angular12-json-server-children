@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { ProductosService } from 'src/app/services/productos.service';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:ActivatedRoute, private productosService:ProductosService) { }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id')!;
+this.productosService.listDetail(id).subscribe(data=>{
+  console.log(data)
+})
   }
 
 }

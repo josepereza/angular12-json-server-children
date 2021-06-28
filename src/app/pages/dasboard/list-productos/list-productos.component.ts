@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductosService } from 'src/app/services/productos.service';
 import { Producto } from '../../../models/producto'
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 @Component({
   selector: 'app-list-productos',
   templateUrl: './list-productos.component.html',
@@ -8,14 +10,12 @@ import { Producto } from '../../../models/producto'
 })
 export class ListProductosComponent implements OnInit {
 productos:Producto[]=[]
-  constructor(private productosService:ProductosService) { }
+  constructor(private productosService:ProductosService, private router:Router) { }
 
   ngOnInit(): void {
     this.productosService.listAll().subscribe(data=>this.productos=data)
   }
 detail(id:number){
-this.productosService.listDetail(id).subscribe(data=>{
-  console.log(data)
-})
+this.router.navigate(['/dasboard/detail', id])
 }
 }

@@ -1,6 +1,7 @@
 <p>list-productos works!</p>
 <ul *ngFor="let dato of productos">
     <li>
+        <b>"Id : "</b>,{{dato.id}} <br>
     <b>"Nombre : "</b>,{{dato.name}} <br>
     <b>"Descripcion : "</b>,{{dato.description}} <br>
     <button  (click)="detail(dato.id)" class="btn btn-primary">Ver</button>
